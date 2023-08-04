@@ -6,7 +6,12 @@
 
 import requests
 import pandas as pd
+import os 
+from dotenv import load_dotenv
 
+load_dotenv()
+
+access_token=os.getenv('acess token')
 
 # In[ ]:
 
@@ -30,7 +35,7 @@ import pandas as pd
 
 
 records=[]
-headers={'access_token': 'fe66583bfe5185048c66571293e0d358'}
+headers={'access_token': access_token}
 api_endpoint='https://zucwflxqsxrsmwseehqvjmnx2u0cdigp.lambda-url.ap-south-1.on.aws/mentorskool/v1/sales'
 offset=0
 limit=100
